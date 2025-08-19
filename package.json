@@ -1,0 +1,14 @@
+{
+  "name": "scoreboard-overlay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OBS/Streamlabs browser source scoreboard overlay with control panel and WebSocket sync.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.18.0"
+  }
+}
+

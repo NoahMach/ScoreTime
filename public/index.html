@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scoreboard Overlay</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="/overlay.js"></script>
+</head>
+<body>
+  <div id="overlay" class="overlay">
+    <div class="bar">
+      <div class="left">
+        <div class="team" id="team0">
+          <img class="logo" id="logo0" alt="" />
+          <div class="meta">
+            <div class="name" id="name0">Team A</div>
+            <div class="series" id="series0"></div>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <div class="title" id="title">Match</div>
+        <div class="timer" id="timer">00:00</div>
+      </div>
+      <div class="right">
+        <div class="team" id="team1">
+          <div class="meta">
+            <div class="name" id="name1">Team B</div>
+            <div class="series" id="series1"></div>
+          </div>
+          <img class="logo" id="logo1" alt="" />
+        </div>
+      </div>
+      <div class="score" id="score0">0</div>
+      <div class="score" id="score1">0</div>
+    </div>
+    <div id="ticker" class="ticker" hidden></div>
+  </div>
+</body>
+</html>
+
