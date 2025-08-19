@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scoreboard Control</title>
+  <link rel="stylesheet" href="/ui.css" />
+  <script defer src="/control.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Scoreboard Control</h1>
+      <div class="row">
+        <label><input id="theme" type="checkbox"> Light theme</label>
+        <button id="reset">Reset</button>
+      </div>
+    </header>
+    <section class="grid">
+      <div class="card">
+        <h2>Match</h2>
+        <label>Title <input id="title" type="text" placeholder="Grand Finals" /></label>
+        <label>Ticker <input id="tickerText" type="text" placeholder="Announcements..." /></label>
+        <label class="row"><input id="tickerEnabled" type="checkbox" /> Show ticker</label>
+      </div>
+      <div class="card">
+        <h2>Teams</h2>
+        <div class="team-grid">
+          <div>
+            <label>Name <input id="name0" type="text" /></label>
+            <label>Color <input id="color0" type="color" value="#1f8ef1" /></label>
+            <label>Logo URL <input id="logo0" type="text" placeholder="https://..." /></label>
+            <div class="row">
+              <button data-score="0" data-delta="1">+1</button>
+              <button data-score="0" data-delta="-1">-1</button>
+            </div>
+          </div>
+          <div>
+            <label>Name <input id="name1" type="text" /></label>
+            <label>Color <input id="color1" type="color" value="#f5365c" /></label>
+            <label>Logo URL <input id="logo1" type="text" placeholder="https://..." /></label>
+            <div class="row">
+              <button data-score="1" data-delta="1">+1</button>
+              <button data-score="1" data-delta="-1">-1</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Series</h2>
+        <label class="row"><input id="seriesEnabled" type="checkbox" checked /> Enabled</label>
+        <label>Best Of <input id="bestOf" type="number" min="1" max="9" step="2" value="5" /></label>
+        <div class="row">
+          <button data-series="0" data-delta="1">Team A +1</button>
+          <button data-series="0" data-delta="-1">Team A -1</button>
+          <button data-series="1" data-delta="1">Team B +1</button>
+          <button data-series="1" data-delta="-1">Team B -1</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Timer</h2>
+        <div class="row">
+          <button id="start">Start</button>
+          <button id="stop">Stop</button>
+          <button id="zero">Zero</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
+
